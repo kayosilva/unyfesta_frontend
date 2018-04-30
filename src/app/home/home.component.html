@@ -45,6 +45,19 @@
       <!-- /.col -->
     </form>
 
+
+    <div class="col-sm-12 col-xs-12" *ngIf="result">
+      <h3 class="text-green">Festa calculada !</h3>
+      <p>Olá para sua festa será necessário:</p>
+
+      <p>{{result.salgados}} Salgados;</p>
+      <p>{{result.doces}} Doces;</p>
+      <p>{{result.refrigerantes}} litros de refrigerantes;</p>
+      <p>{{result.carne}}KGs de carne;</p>
+      <p *ngIf="result.cerveja">{{result.cerveja}} latinhas de cerveja;</p>
+      <p *ngIf="result.whisky">{{result.whisky}} litros de whisky;</p>
+    </div>
+
   </div>
   <!-- /.row -->
 

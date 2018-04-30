@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HomeService } from "./home.service";
+import { Result } from "./result.model";
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { HomeService } from "./home.service";
 })
 export class HomeComponent implements OnInit {
 
-    protected result;
+    result: Result;
 
     constructor(
         protected homeService: HomeService
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
 
     calculate(value) {
         this.homeService.calculate(value)
-            .subscribe(response => this.result = response);
+            .subscribe(response => this.result = response.result);
     }
 
 }

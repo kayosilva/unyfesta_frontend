@@ -1,3 +1,7 @@
+# Configuração do projeto
+- Instalar as dependências do projeto: npm install
+- Rodar projeto: ng serve
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
