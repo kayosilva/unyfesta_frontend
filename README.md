@@ -1,6 +1,7 @@
 # Configuração do projeto
 - Instalar as dependências do projeto: npm install
 - Rodar projeto: ng serve
+- Acessar projeto: http://localhost:4200/
 
 # Frontend
 
