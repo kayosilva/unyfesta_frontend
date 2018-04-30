@@ -1,0 +1,52 @@
+<!-- INÍCIO DO CONTEÚDO -->
+<section class="content-header"></section>
+
+<section class="content">
+
+  <h1 class="text-orange" style="margin-bottom:  30px;">Bem vindo ao UnyFestas!</h1>
+
+  <div class="row invoice-info">
+
+    <div class="col-xs-12">
+      <p>Preencha o formulário abaixo para calcular sua festa.</p>
+    </div>
+
+    <form #form="ngForm" novalidate>
+      <div class="col-sm-8 col-xs-12">
+        <app-input-container label="Quantidade de adultos"
+                            errorMessage="Informe a quantidade de adultos!">
+          <input class="form-control" type="number" name="adultos" placeholder="Quantidade de adultos" ngModel required autocomplete="off">
+        </app-input-container>
+      </div>
+
+      <div class="col-sm-8 col-xs-12">
+        <app-input-container label="Informe a quantidade de crianças"
+                            errorMessage="Campo Obrigatório!">
+          <input class="form-control" type="number" name="criancas" placeholder="Quantidade de crianças" ngModel required autocomplete="off">
+        </app-input-container>
+      </div>
+
+      <div class="col-sm-6 col-xs-12">
+        <app-input-container label="Bebida alcoólica?"
+                             errorMessage="Selecione uma opção!">
+          <select class="form-control" name="bebidas" placeholder="Terá bebida alcoólica?" ngModel required>
+            <option value="">Terá bebida alcoólica?</option>
+            <option value="yes">SIM</option>
+            <option value="no">NÃO</option>
+          </select>
+        </app-input-container>
+      </div>
+
+      <div class="col-sm-2 col-xs-12">
+        <button class="btn btn-primary btn-flat btn-block"
+                (click)="calculate(form.value);"
+                [disabled]="!form.valid">Calcular</button>
+      </div>
+      <!-- /.col -->
+    </form>
+
+  </div>
+  <!-- /.row -->
+
+</section>
+<!-- FIM DO CONTEÚDO -->
